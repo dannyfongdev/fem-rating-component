@@ -15,7 +15,7 @@ function Rating() {
       if (index === theRating - 1) {
         return { color: "#fff", backgroundColor: "hsl(216, 12%, 54%)" };
       } else {
-        return { };
+        return {};
       }
     });
     setTheStyles(newStyles);
@@ -28,19 +28,16 @@ function Rating() {
 
   // use inline style to set the background color of the selected rating <a> tag.
   const [theStyles, setTheStyles] = useState([
-    { },
-    { },
-    { },
-    { },
-    { },
+    {},
+    {},
+    {},
+    {},
+    {},
   ]);
 
   return (
     <div className="container container--rating">
-      {/* <div className="card"> */}
-      <div className="star-icon">
-        <img src="./images/icon-star.svg" alt="star" />
-      </div>
+      <img className="star-icon" src="./images/icon-star.svg" alt="star" />
       <h1>How did we do?</h1>
       <p>
         Please let us know how we did with your support request. All feedback
@@ -83,7 +80,7 @@ function Rating() {
           5
         </button>
       </div>
-      <button onClick={handleSubmit} className="btn btn-submit">
+      <button onClick={handleSubmit} className="btn-submit">
         Submit
       </button>
     </div>

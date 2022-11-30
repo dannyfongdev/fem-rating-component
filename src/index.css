@@ -54,10 +54,10 @@ p {
 .star-icon {
   height: 40px;
   width: 40px;
+  padding: 13px;
   border-radius: 50%;
+  border: none;
   background-color: var(--neutral-color-3);
-  text-align: center;
-  padding-top: 12px;
   margin-bottom: 20px;
 }
 
@@ -98,6 +98,44 @@ p {
   margin-bottom: 10px;
 }
 
+@media (min-width: 500px) {
+  .container {
+    max-width: 410px;
+    padding: 35px;
+  }
+
+  .star-icon {
+    height: 50px;
+    width: 50px;
+    padding: 16.5px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .btn {
+    height: 50px;
+    width: 50px;
+  }
+
+  .rating {
+    margin-bottom: 30px;
+  }
+
+  .btn-submit {
+    font-size: 15px;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 25px;
+  }
+}
+
 /* Thank You Component */
 
 .container--thank-you {
@@ -111,6 +149,11 @@ p {
   align-self: center;
   margin-bottom: 30px;
 }
+
+.container--thank-you h1 {
+  margin-bottom: 20px;
+}
+
 .container--thank-you h2 {
   color: var(--primary-color);
   background-color: var(--neutral-color-3);
@@ -118,11 +161,31 @@ p {
   padding: 10px;
   width: 12rem;
   margin:auto;
-  font-size: 0.9rem;
+  font-size: 13px;
+  font-weight:lighter;
+  letter-spacing: 0.05rem;
   margin-bottom: 30px;
  }
 
 .container--thank-you p {
   width: 17rem;
   margin: auto;
+}
+
+@media (min-width: 500px) {
+  .container--thank-you {
+    padding-top: 44px;
+    padding-bottom: 40px;
+  }
+  .container--thank-you img {
+    width: 160px;
+  }
+  .container--thank-you h2 {
+    width: 13rem;
+    font-size: 15px;
+  }
+  .container--thank-you p {
+    width: 21rem;
+    font-size: 15px;
+  }
 }
