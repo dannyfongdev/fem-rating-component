@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+
+import "./App.css";
+import StateContext from "./StateContext";
+import Rating from "./Rating";
+import ThankYou from "./ThankYou";
 
 function App() {
+  const [rating, setRating] = useState(0);
+  const [hasSubmitted, setHasSubmitted] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StateContext.Provider value={{ rating, setRating, setHasSubmitted }}>
+      { !hasSubmitted && <Rating />}
+      { hasSubmitted && <ThankYou />}
+    </StateContext.Provider>
   );
 }
 
