@@ -36,6 +36,7 @@ function Rating() {
   ]);
 
   return (
+    <div className="wrapper"><div className="vertical-center">
     <div className="container container--rating">
       <img className="star-icon" src="./images/icon-star.svg" alt="star" />
       <h1>How did we do?</h1>
@@ -83,7 +84,7 @@ function Rating() {
       <button onClick={handleSubmit} className="btn-submit">
         Submit
       </button>
-    </div>
+    </div></div></div>
   );
 }
 
