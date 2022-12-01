@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import StateContext from "./StateContext";
 
 function Rating() {
-  const { setRating, setHasSubmitted } = useContext(StateContext);
+  const { rating, setRating, setHasSubmitted } = useContext(StateContext);
 
   const handleRatingClick = (e) => {
     // last character is rating number, e.g. "btn r1"
@@ -23,7 +23,9 @@ function Rating() {
 
   const handleSubmit = () => {
     // App.js reacts to this and changes view to ThankYou
-    setHasSubmitted(true);
+    // Currently dis not give error message to user
+    if (rating > 0)
+      setHasSubmitted(true);
   };
 
   // use inline style to set the background color of the selected rating <a> tag.

@@ -99,6 +99,11 @@ p {
   margin-bottom: 10px;
 }
 
+.btn-submit:hover {
+  background-color: var(--white-color);
+  color: var(--primary-color)
+}
+
 @media (min-width: 500px) {
   .container {
     max-width: 410px;
